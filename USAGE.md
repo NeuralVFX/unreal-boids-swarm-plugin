@@ -67,26 +67,24 @@
 
 ## BoidsDemoSwarm Attributes
 
-
 ### Boids Mesh
 ```
---Instance Size, default=.03, type=float                       # Scale of instances
+--Instance Size, default=.03, type=float                        # Scale of instances
 ```
-
 ### Boids Simulation
 ```
 --Instance Count, default=1000, type=int                        # How many instances to include in simulation
 --Width, default=400, type=float                                # Width of starting box for instances
 --Height, default=400, type=float                               # Height of starting box for instances
 --Depth, default=400, type=float                                # Depth of starting box for instances
---Min Dist, default=2.0, type=float                             # Distance at which neighbor repulsion starts
---Max Dist, default=400, type=float                             # Distance at wich neighbor attraction ends
---Vel Mult, default=400, type=float                             # Overall multiplier for velocity
---Min Vel, default=400, type=float                              # Minimum velocity clip value
---Max Vel, default=400, type=float                              # Maximum velocity clip value
---Max Acc, default=400, type=float                              # Clip value for overall velocity
---Goal Strength, default=400, type=float                        # Multiplier for target attraction velocity
---Avoid Dist, default=400, type=float                           # Distance cutoff for goal avoidance
---Avoid Strength, default=400, type=float                       # Multiplier for target repulsion velocity
+--Min Dist, default=25.0, type=float                            # Distance at which neighbor repulsion starts
+--Max Dist, default=50.0, type=float                            # Distance at wich neighbor attraction ends
+--Vel Mult, default=1.5, type=float                             # Overall multiplier for velocity
+--Min Vel, default=.5, type=float                               # Minimum velocity clip value
+--Max Vel, default=2.0, type=float                              # Maximum velocity clip value
+--Max Acc, default=.03, type=float                              # Clip value for overall velocity
+--Goal Strength, default=0.5, type=float                        # Multiplier for target attraction velocity
+--Avoid Strength, default=1.0, type=float                       # Multiplier for target repulsion velocity
+--Avoid Dist, default=400.0, type=float                         # Distance cutoff for goal avoidance
 --Ticket, default=0, type=int                                   # Which index is being used to query the DLL
 ```
