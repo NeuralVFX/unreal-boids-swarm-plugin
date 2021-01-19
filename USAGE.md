@@ -11,20 +11,21 @@
 - Clone this Repo into the plugins folder (Or download the zip file and unzip there)
 - Right-click your `.uproject` file and click `Generate Visual Studio Project Files`
 - Build the project from Visual Studio, using `Build Solution`
-![](Images/plugin_a.jpg)
 
 #### Find Plugin
 - Open the compiled project in Unreal Engine
 - From `Edit->Plugins`, locate the `Other` Category
 - Find `BoidsSwarm` and click `Enable`
+![](Images/plugin.png)
 
 #### Scene/World Setup
 
 - To set up keymapping, go to `Edit->Project Settings` and click `Import`, and then import the file `Resources/KeyMapping.ini`
-- The Boids actor is a Pawn, so in `World Settings`, make sure that `GameMode Override` is set to `BoidsGameMode_BP`, this has the Pawn set already.
 - Open `Settings->Project Settings` and find `GameInstanceClass`, replace this with `cDataStorageGameInstance`
+![](Images/game_instance.png)
 - In the Content Manager, navigate to BoidsSwarm Content `Level->FishExample`
-![](Images/attributes_a.jpg)
+- The Boids actor is a Pawn, so in `World Settings`, double check that `GameMode Override` is set to `BoidsGameMode_BP`, this has the Pawn set already.
+![](Images/game_mode.png)
 
 ## Run It
 
@@ -65,6 +66,8 @@
 - A simple level to run `DemoBoidsSwarm_BP` Pawn
 
 ## BoidsDemoSwarm Class Attributes
+
+![](Images/attributes.png)
 
 ### Boids Mesh
 ```
