@@ -28,6 +28,27 @@
 
 ![](Images/attributes_a.jpg)
 
+## Run It
+
+#### Run Test Scene
+
 - Play the level!
 - Move the mouse to slide the Boids target around
-- Hit space bar to switch between controlling the Attraction target and the Repulsion target
+- Hit space bar to switch between controlling the Attrack/Repel targets
+
+## Classes
+
+#### DemoBoidsSwarm - Pawn Class
+- Actor Pawn class contains an `InstancedStaticMesh`, a `Camera`, and two `SceneComponents` to control the Attrack/Repel targets.
+- On every tick, this queries the next step of the BOIDs simulation and updates the instanced `InstancedStaticMesh`
+- The positition/vel is queried from `UDataStorageGameInstance`
+
+#### cDataStoageWrapper - Object Class
+- Wrapper for `boids.dll`
+- Finds and initiates `DLL`
+- Exposes functions of `DLL`
+
+#### UDataStorageGameInstance - GameInstance Class
+- This is a wrapper for `cDataStoageWrapper`
+- Manages starting and stopping `LibTorch` based on the game state
+- Retrieves `LibTorch` output, to pass on to `DemoBoidsSwarm`
