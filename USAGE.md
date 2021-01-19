@@ -25,7 +25,6 @@
 - The Boids actor is a Pawn, so in `World Settigs`, make sure that `GameMode Override` is set to `BoidsGameMode_BP`, this has the Pawn set already.
 - Open `Settings->Project Settings` and find `GameInstanceClass`, replace this with `cDataStorageGameInstance`
 - In the Content Manager, navigate to BoidsSwarm Content `Level->FishExample`
-
 ![](Images/attributes_a.jpg)
 
 ## Run It
