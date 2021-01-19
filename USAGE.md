@@ -65,7 +65,7 @@
 #### FishExample - Level
 - A simple level to run `DemoBoidsSwarm_BP` Pawn
 
-## BoidsDemoSwarm Attributes
+## BoidsDemoSwarm Class Attributes
 
 ### Boids Mesh
 ```
