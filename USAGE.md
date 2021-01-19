@@ -5,14 +5,6 @@
 
 - Unreal Engine 4.26
 
-
-
-![](Images/plugin_a.jpg)
-
-#### Set GameInstance
-
-- Open `Settings->Project Settings` and find `GameInstanceClass`, replace this with `cDataStorageGameInstance`
-
 ## Project Setup
 
 - Make a C++ Unreal Project 
@@ -20,7 +12,7 @@
 - Clone this Repo into the plugins folder (Or download the zip file and unzip there)
 - Right click your `.uproject` file and click `Generate Visual Studio Project Files`
 - Build the project from Visual Studio, using `Build Solution`
-
+![](Images/plugin_a.jpg)
 
 #### Find Plugin
 - Open the compiled project in Unreal Engine
