@@ -1,6 +1,5 @@
 // Copyright 2020 NeuralVFX, Inc. All Rights Reserved.
 
-
 #include "cDataStorageGameInstance.h"
 
 
