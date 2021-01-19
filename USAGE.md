@@ -35,6 +35,8 @@
 - Move the mouse to slide the Boids target around
 - Hit space bar to switch between controlling the Attrack/Repel targets
 
+# Plugin Contents
+
 ## Classes
 
 #### DemoBoidsSwarm - Pawn Class
