@@ -54,15 +54,6 @@
 
 ## Content
 
-#### Fish - StaticMesh
-- A fish model which is instanced in `DemoBoidsSwarm_BP`
-
-#### FishMat, FishTexture - Material, Texture
-- Material and texture assigned to `Fish`
-
-#### GreenMat, RedMat - Materials
-- Materials assigned to spheres in `DemoBoidsSwarm_BP`
-
 #### BoidsGameModeBP - GameMode BluePrint
 - A GameMode which has the `Default Pawn Class` overrriden with `DemoBoidsSwarm_BP`
 
