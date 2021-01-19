@@ -39,7 +39,7 @@
 ## Classes
 
 #### DemoBoidsSwarm - Pawn Class
-- Actor Pawn class contains an `InstancedStaticMesh`, a `Camera`, and two `SceneComponents` to control the Attrack/Repel targets.
+- Pawn class which contains an `InstancedStaticMesh`, a `Camera`, and two `SceneComponents` to control the Attrack/Repel targets.
 - On every tick, this queries the next step of the BOIDs simulation and updates the instanced `InstancedStaticMesh`
 - The positition/vel is queried from `UDataStorageGameInstance`
 
