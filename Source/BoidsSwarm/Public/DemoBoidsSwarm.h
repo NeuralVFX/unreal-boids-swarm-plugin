@@ -36,7 +36,7 @@ class BOIDSSWARM_API ADemoBoidsSwarm : public APawn
 		*Attributes required to initiate LibTorch model
 		*/
 		UPROPERTY(EditAnywhere, Category = "BOIDs Simulation")
-		int N;
+		int instance_count;
 
 		UPROPERTY(EditAnywhere, Category = "BOIDs Simulation")
 		int width;
@@ -63,7 +63,7 @@ class BOIDSSWARM_API ADemoBoidsSwarm : public APawn
 		float  max_vel;
 
 		UPROPERTY(EditAnywhere, Category = "BOIDs Simulation")
-		float maxacc;
+		float max_acc;
 
 		/**
 		* Attributes required to tick LibTorch model

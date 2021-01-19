@@ -31,26 +31,26 @@ ADemoBoidsSwarm::ADemoBoidsSwarm()
 	Goal = CreateDefaultSubobject<USceneComponent>(TEXT("Goal"));
 	Goal->SetupAttachment(RootComponent);
 
-	// Defualt values
-	instance_size = .3;
+	// Default values
+	instance_size = 0.03;
 	WhichControl = false;
 
 	// DLL Initiation default values
-	N = 1000;
+	instance_count = 1000;
 	width = 400;
 	height = 400;
 	depth = 400;
-	min_dist = 25.0;
-	max_dist = 50.0;
+	min_dist = 40.0;
+	max_dist = 70.0;
 	vel_mult = 1.5;
 	min_vel = 0.5;
 	max_vel = 2.0;
-	maxacc = 0.03;
+	max_acc = 0.03;
 
-	// DLL Tick defualt values
-	GoalStrength = .5;
-	AvoidStrength = 1.;
-	AvoidDist = 400.;
+	// DLL Tick default values
+	GoalStrength = 1.;
+	AvoidStrength = 5.;
+	AvoidDist = 150.;
 	ticket = 0;
 }
 
@@ -64,7 +64,7 @@ void ADemoBoidsSwarm::BeginPlay()
 
 	// Fill initiation struct
 	AttributeData attributes;
-	attributes.count = N;
+	attributes.count = instance_count;
 	attributes.width = width;
 	attributes.height = height;
 	attributes.depth = depth;
@@ -73,18 +73,18 @@ void ADemoBoidsSwarm::BeginPlay()
 	attributes.vel_mult = vel_mult;
 	attributes.min_vel = min_vel;
 	attributes.max_vel = max_vel;
-	attributes.maxacc = maxacc;
+	attributes.maxacc = max_acc;
 
 	// Initiate DLL
 	UcDataStorageGameInstance* GameInst = (UcDataStorageGameInstance*)GetGameInstance();
 	ticket = GameInst->CustomStart(attributes);
 
 	// Allocate correct amount of memory  to recieve data from DLL
-	pos = (float*)malloc(sizeof(float)*N * 3);
-	vel = (float*)malloc(sizeof(float)*N * 3);
+	pos = (float*)malloc(sizeof(float)*instance_count * 3);
+	vel = (float*)malloc(sizeof(float)*instance_count * 3);
 
 	// Build array of instances
-	for (int i = 0; i < N; i++)
+	for (int i = 0; i < instance_count; i++)
 	{
 		FTransform position(FVector(0, 0, 0));
 		ISMCA->AddInstance(position);
@@ -124,7 +124,7 @@ void ADemoBoidsSwarm::Tick(float DeltaTime)
 	FTransform ActorTran = GetActorTransform();
 
 	// Loop through and set posistion and orientation of all instances
-	for (int i = 0; i < N; i++)
+	for (int i = 0; i < instance_count; i++)
 	{
 		FMatrix rot = FRotationMatrix::MakeFromX(FVector(vel[i * 3], vel[(i * 3) + 1], vel[(i * 3) + 2]));
 		FTransform position(rot.ToQuat(), FVector(pos[i * 3], pos[(i * 3) + 1], pos[(i * 3) + 2]), FVector(instance_size));
