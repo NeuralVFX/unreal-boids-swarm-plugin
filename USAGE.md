@@ -17,7 +17,7 @@
 #### Find Plugin
 - Open the compiled project in Unreal Engine
 - From `Edit->Plugins`, locate the `Other` Category
-- Find ``BoidsSwarm` and click `Enable`
+- Find `BoidsSwarm` and click `Enable`
 
 #### Scene/World Setup
 
