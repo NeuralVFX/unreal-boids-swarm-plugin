@@ -22,10 +22,10 @@
 #### Scene/World Setup
 
 - To set up keymapping, go to `Edit->Project Settings` and click `Import`, and then import the file `Resources/KeyMapping.ini`
-- Open `Settings->Project Settings` and find `GameInstanceClass`, replace this with `cDataStorageGameInstance`
+- To enable DLL, open `Settings->Project Settings` and find `GameInstanceClass`, replace this with `cDataStorageGameInstance`
 
 ![](Images/game_instance.png)
-- In the Content Manager, navigate to BoidsSwarm Content `Level->FishExample`
+- In the Content Manager, navigate to `BoidsSwarm Content Level->FishExample`
 - The Boids actor is a Pawn, so in `World Settings`, double check that `GameMode Override` is set to `BoidsGameMode_BP`, this has the Pawn set already.
 
 ![](Images/game_mode.png)
