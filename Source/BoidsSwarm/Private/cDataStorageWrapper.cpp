@@ -7,10 +7,9 @@
 bool UcDataStorageWrapper::ImportDLL(FString FolderName, FString DLLName)
 {
 	// Init DLL from a Path
-	FString FilePath = *FPaths::ProjectDir() + FolderName + "/" + DLLName;
-	FString EnginePath = *FPaths::EngineDir();
+	FString FilePath = *FPaths::ProjectPluginsDir() + FolderName + "/" + DLLName;
 
-	UE_LOG(LogTemp, Error, TEXT("EnginePath: %s"), *EnginePath);
+	UE_LOG(LogTemp, Error, TEXT("EnginePath: %s"), *FilePath);
 
 	if (FPaths::FileExists(FilePath))
 	{

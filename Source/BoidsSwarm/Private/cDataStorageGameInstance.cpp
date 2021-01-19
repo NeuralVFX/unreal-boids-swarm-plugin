@@ -23,7 +23,7 @@ bool UcDataStorageGameInstance::ImportDataStorageLibrary()
 		UE_LOG(LogTemp, Error, TEXT("Could not Create the Data Storage Object"));
 		return false;
 	}
-	if (!m_refDataStorageUtil->ImportDLL("Binaries/Win64", "boids.dll"))
+	if (!m_refDataStorageUtil->ImportDLL("unreal-boids-swarm-plugin/Binaries/Win64", "boids.dll"))
 	{
 		UE_LOG(LogTemp, Error, TEXT("Failed to Import DLL"));
 		return false;
