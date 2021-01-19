@@ -21,15 +21,6 @@
 - Copy `LibTorch DLLs` into the projects (not the plugin) `Binaries` folder (ie:`Binaries/Win64/`)
 
 #### Find Plugin
-## Project Setup
-
-- Make a C++ Unreal Project 
-- Make sure you have a `Plugins` folder inside of the project
-- Clone this Repo into the plugins folder (Or download the zip file and unzip there)
-- Right-click your `.uproject` file and click `Generate Visual Studio Project Files`
-- Build the project from Visual Studio, using `Build Solution`
-
-#### Find Plugin
 - Open the compiled project in Unreal Engine
 - From `Edit->Plugins`, locate the `Other` Category
 - Find `BoidsSwarm` and click `Enable`
