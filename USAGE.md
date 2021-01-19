@@ -51,3 +51,23 @@
 - This is a wrapper for `cDataStoageWrapper`
 - Manages starting and stopping `LibTorch` based on the game state
 - Retrieves `LibTorch` output, to pass on to `DemoBoidsSwarm`
+
+## Content
+
+#### Fish - StaticMesh
+- A fish model which is instanced in `DemoBoidsSwarm_BP`
+
+#### FishMat, FishTexture - Material, Texture
+- Material and texture assigned to `Fish`
+
+#### GreenMat, RedMat - Materials
+- Materials assigned to spheres in `DemoBoidsSwarm_BP`
+
+#### BoidsGameModeBP - GameMode BluePrint
+- A GameMode which has the `Default Pawn Class` overrriden with `DemoBoidsSwarm_BP`
+
+#### DemoBoidsSwarm_BP - DemoBoidsSwarm BluePrint
+- A BluePrint with a Fish assigned as the `InstancedStaticMesh` and Spheres parented to the Attrack/Repel `SceneComponents`
+
+#### FishExample - Level
+- A simple level to run `DemoBoidsSwarm_BP` Pawn
