@@ -18,7 +18,7 @@ private:
 
 	/** Storage for DLL object */
 	UPROPERTY()
-		class UcDataStorageWrapper* m_refDataStorageUtil;
+	class UcDataStorageWrapper* m_refDataStorageUtil;
 
 	/**
 	* Attempt to import DLL and all of its functions.

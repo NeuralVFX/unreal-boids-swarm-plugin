@@ -32,7 +32,7 @@ ADemoBoidsSwarm::ADemoBoidsSwarm()
 	Goal->SetupAttachment(RootComponent);
 
 	// Defualt values
-	fish_size = .3;
+	instance_size = .3;
 	WhichControl = false;
 
 	// DLL Initiation default values
@@ -127,7 +127,7 @@ void ADemoBoidsSwarm::Tick(float DeltaTime)
 	for (int i = 0; i < N; i++)
 	{
 		FMatrix rot = FRotationMatrix::MakeFromX(FVector(vel[i * 3], vel[(i * 3) + 1], vel[(i * 3) + 2]));
-		FTransform position(rot.ToQuat(), FVector(pos[i * 3], pos[(i * 3) + 1], pos[(i * 3) + 2]), FVector(fish_size));
+		FTransform position(rot.ToQuat(), FVector(pos[i * 3], pos[(i * 3) + 1], pos[(i * 3) + 2]), FVector(instance_size));
 		ISMCA->UpdateInstanceTransform(i, position*ActorTran, true);
 		ISMCA->MarkRenderStateDirty();
 	}

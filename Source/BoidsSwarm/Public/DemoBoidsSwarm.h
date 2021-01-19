@@ -22,73 +22,73 @@ class BOIDSSWARM_API ADemoBoidsSwarm : public APawn
 
 		/** Camera to attach to boom */
 		UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
-			class UCameraComponent* Camera;
+		class UCameraComponent* Camera;
 
 		/** Swarm/Flock instances */
-		UPROPERTY(EditAnywhere, Category = "Mesh")
-			class UInstancedStaticMeshComponent* ISMCA;
+		UPROPERTY(EditAnywhere, Category = "BOIDs Mesh")
+		class UInstancedStaticMeshComponent* ISMCA;
 
 		/** Scale of Swarm/Flock instances */
-		UPROPERTY(EditAnywhere, Category = "Mesh")
-			float fish_size;
+		UPROPERTY(EditAnywhere, Category = "BOIDs Mesh")
+		float instance_size;
 
 		/**
 		*Attributes required to initiate LibTorch model
 		*/
-		UPROPERTY(EditAnywhere, Category = "Particles")
-			int N;
+		UPROPERTY(EditAnywhere, Category = "BOIDs Simulation")
+		int N;
 
-		UPROPERTY(EditAnywhere, Category = "Particles")
-			int width;
+		UPROPERTY(EditAnywhere, Category = "BOIDs Simulation")
+		int width;
 
-		UPROPERTY(EditAnywhere, Category = "Particles")
-			int height;
+		UPROPERTY(EditAnywhere, Category = "BOIDs Simulation")
+		int height;
 
-		UPROPERTY(EditAnywhere, Category = "Particles")
-			int depth;
+		UPROPERTY(EditAnywhere, Category = "BOIDs Simulation")
+		int depth;
 
-		UPROPERTY(EditAnywhere, Category = "Particles")
-			float min_dist;
+		UPROPERTY(EditAnywhere, Category = "BOIDs Simulation")
+		float min_dist;
 
-		UPROPERTY(EditAnywhere, Category = "Particles")
-			float max_dist;
+		UPROPERTY(EditAnywhere, Category = "BOIDs Simulation")
+		float max_dist;
 
-		UPROPERTY(EditAnywhere, Category = "Particles")
-			float vel_mult;
+		UPROPERTY(EditAnywhere, Category = "BOIDs Simulation")
+		float vel_mult;
 
-		UPROPERTY(EditAnywhere, Category = "Particles")
-			float min_vel;
+		UPROPERTY(EditAnywhere, Category = "BOIDs Simulation")
+		float min_vel;
 
-		UPROPERTY(EditAnywhere, Category = "Particles")
-			float  max_vel;
+		UPROPERTY(EditAnywhere, Category = "BOIDs Simulation")
+		float  max_vel;
 
-		UPROPERTY(EditAnywhere, Category = "Particles")
-			float maxacc;
+		UPROPERTY(EditAnywhere, Category = "BOIDs Simulation")
+		float maxacc;
 
 		/**
 		* Attributes required to tick LibTorch model
 		*/
-		UPROPERTY(EditAnywhere, Category = "Particles")
-			float GoalStrength;
+		UPROPERTY(EditAnywhere, Category = "BOIDs Simulation")
+		float GoalStrength;
 
-		UPROPERTY(EditAnywhere, Category = "Particles")
-			float AvoidDist;
+		UPROPERTY(EditAnywhere, Category = "BOIDs Simulation")
+		float AvoidDist;
 
-		UPROPERTY(EditAnywhere, Category = "Particles")
-			float AvoidStrength;
+		UPROPERTY(EditAnywhere, Category = "BOIDs Simulation")
+		float AvoidStrength;
 
 		/**
 		*Scene components for attraction and repultion, controlled by mouse
 		*/
-		UPROPERTY(EditAnywhere, Category = "Particles")
-			class USceneComponent* Goal;
+		UPROPERTY(EditAnywhere, Category = "BOIDs Simulation")
+		class USceneComponent* Goal;
 
-		UPROPERTY(EditAnywhere, Category = "Particles")
-			class USceneComponent* Avoid;
+		UPROPERTY(EditAnywhere, Category = "BOIDs Simulation")
+		class USceneComponent* Avoid;
 
 		/** Index of which model we are assigned by DLL */
-		UPROPERTY(VisibleAnywhere, Category = "Particles")
-			int ticket;
+		UPROPERTY(VisibleAnywhere, Category = "BOIDs Simulation")
+		int ticket;
 
 		/** Pointer to fetch position and velocity data from DLL */
 		float* pos;
