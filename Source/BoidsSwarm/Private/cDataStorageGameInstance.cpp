@@ -42,7 +42,7 @@ void UcDataStorageGameInstance::Shutdown()
 {
 	int Result = m_refDataStorageUtil->CallClose();
 	Super::Shutdown();
-	UE_LOG(LogTemp, Error, TEXT("Release Torch Models"))
+	UE_LOG(LogTemp, Log, TEXT("Release Torch Models"))
 }
 
 

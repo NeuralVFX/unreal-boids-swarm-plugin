@@ -9,8 +9,6 @@ bool UcDataStorageWrapper::ImportDLL(FString FolderName, FString DLLName)
 	// Init DLL from a Path
 	FString FilePath = *FPaths::ProjectPluginsDir() + FolderName + "/" + DLLName;
 
-	UE_LOG(LogTemp, Error, TEXT("EnginePath: %s"), *FilePath);
-
 	if (FPaths::FileExists(FilePath))
 	{
 		v_dllHandle = FPlatformProcess::GetDllHandle(*FilePath);
@@ -20,7 +18,7 @@ bool UcDataStorageWrapper::ImportDLL(FString FolderName, FString DLLName)
 		}
 		else
 		{
-			UE_LOG(LogTemp, Error, TEXT("Fail"));
+			UE_LOG(LogTemp, Error, TEXT("Failed to load %s"),*FilePath);
 		}
 	}
 	return false;
@@ -81,7 +79,7 @@ int UcDataStorageWrapper::CallClose()
 
 	// Calls DLL Function to ShutDown Camera
 	m_funcClose();
-	UE_LOG(LogTemp, Error, TEXT("Connection Close"));
+	UE_LOG(LogTemp, Log, TEXT("Connection Close"));
 
 	return 1;
 }
