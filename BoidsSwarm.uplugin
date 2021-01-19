@@ -15,10 +15,10 @@
 	"IsExperimentalVersion": false,
 	"Installed": false,
 	"Modules": [
-		{
-			"Name": "BoidsSwarm",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		}
+    {
+      "Name": "BoidsSwarm",
+      "Type": "Developer",
+      "LoadingPhase": "Default"
+    }
 	]
 }
