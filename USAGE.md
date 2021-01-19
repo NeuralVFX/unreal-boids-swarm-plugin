@@ -67,7 +67,7 @@
 - A GameMode which has the `Default Pawn Class` overrriden with `DemoBoidsSwarm_BP`
 
 #### DemoBoidsSwarm_BP - DemoBoidsSwarm BluePrint
-- A BluePrint with a Fish assigned as the `InstancedStaticMesh` and Spheres parented to the Attrack/Repel `SceneComponents`
+- A Blueprint with a fish assigned as the `InstancedStaticMesh` and spheres parented to the Attrack/Repel `SceneComponents`
 
 #### FishExample - Level
 - A simple level to run `DemoBoidsSwarm_BP` Pawn
