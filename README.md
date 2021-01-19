@@ -1,4 +1,4 @@
-![](https://github.com/NeuralVFX/boids-swarm-dll//blob/master/example.gif)
+![](https://github.com/NeuralVFX/boids-swarm-dll/blob/main/example.gif)
 # Unreal-Boids-Swarm-Plugin
 
 An Unreal Plugin which runs a Boids Swarm simulation on GPU using LibTorch.
