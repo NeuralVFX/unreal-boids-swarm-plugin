@@ -124,7 +124,7 @@ class BOIDSSWARM_API ADemoBoidsSwarm : public APawn
 		void MouseUp(float Value);
 
 		/**
-		*Switch Target and Avoid
+		* Switch Target and Avoid
 		*/
 		void Switch();
 	};
