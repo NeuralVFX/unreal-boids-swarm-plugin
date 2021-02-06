@@ -91,7 +91,7 @@
 --Height, default=400, type=float                               # Height of starting box for instances
 --Depth, default=400, type=float                                # Depth of starting box for instances
 --Min Dist, default=25.0, type=float                            # Distance at which neighbor repulsion starts
---Max Dist, default=50.0, type=float                            # Distance at wich neighbor attraction ends
+--Max Dist, default=50.0, type=float                            # Distance at which neighbor attraction ends
 --Vel Mult, default=1.5, type=float                             # Overall multiplier for velocity
 --Min Vel, default=.5, type=float                               # Minimum velocity clip value
 --Max Vel, default=2.0, type=float                              # Maximum velocity clip value
